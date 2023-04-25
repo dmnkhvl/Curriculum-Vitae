@@ -1,9 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Plus Jakarta Sans", "sans-serif"],
+      },
+      colors:{
+        "light": "#E2E8F0",
+        "dark-blue": "#0F172A",
+        "label": "#334155"
+      }
+    },
   },
   plugins: [],
 }
-
