@@ -1,43 +1,44 @@
 <template>
   <div>
     <header class="text-center">
-      <h1 class="text-5xl font-bold mt-16">Dominik Havel</h1>
-      <h2 class="font-light mt-2 text-lg">
-        Frontend Engineer· Graphic Designer
-      </h2>
+      <h1 class="text-[2.9rem] font-bold mt-10">Dominik Havel</h1>
+      <h2 class="font-light mt-3 text-lg">Frontend Software Engineer</h2>
+
+      <div class="flex justify-center items-center gap-x-2 mt-6">
+        <button-social
+          text="dmnkhvl.eu"
+          href="https://dmnkhvl.eu"
+          aria-label="Link to my website"
+          basic
+          ><img src="../public/web.svg" alt="website" class="w-4 h-4"
+        /></button-social>
+        <button-social
+          text="/dmnkhvl"
+          href="https://www.linkedin.com/in/dmnkhvl/"
+          aria-label="Link to my LinkedIn"
+          linkedin
+          ><img src="../public/linkedin.svg" alt="linkedin" class="w-4 h-4"
+        /></button-social>
+        <button-social
+          text="/dmnkhvl"
+          href="https://github.com/dmnkhvl"
+          aria-label="Link to my GitHub"
+          github
+          ><img src="../public/github.svg" alt="github" class="w-4 h-4"
+        /></button-social>
+      </div>
       <div
-        class="mt-8 flex items-center justify-center gap-x-6 font-light text-xs"
+        class="mt-4 flex items-center justify-center gap-x-6 font-light text-xs"
       >
         <a href="mailto:dev@dmnkhvl.eu" target="_blank" rel="noreferrer"
           >dev@dmnkhvl.eu</a
         >
         <p>+421902660661</p>
       </div>
-      <div class="flex justify-center items-center gap-x-2 mt-3">
-        <button-social
-          text="dmnkhvl.eu"
-          href="https://dmnkhvl.eu"
-          aria-label="Link to my website"
-          basic
-        />
-        <button-social
-          text="/dmnkhvl"
-          href="https://www.linkedin.com/in/dmnkhvl/"
-          aria-label="Link to my LinkedIn"
-          linkedin
-        />
-        <button-social
-          text="/dmnkhvl"
-          href="https://github.com/dmnkhvl"
-          aria-label="Link to my GitHub"
-          github
-        />
-      </div>
     </header>
-    <hr class="w-full mt-10 opacity-10" />
     <main>
-      <page-section heading="About Me">
-        <p class="font-extralight text-sm max-w-[55ch] leading-relaxed">
+      <page-section heading="About Me" class="mt-4">
+        <p class="font-extralight text-xs max-w-[55ch] leading-relaxed">
           I am a frontend web developer with an eye for detail. After years of
           playing basketball at the national level and graphic designing , I
           decided to develop web applications in college, where I had the chance
@@ -64,13 +65,22 @@
           <skill-section title="Designer related" :skills="designTools" />
         </page-subsection>
       </page-section>
+      <page-section heading="Work Experience">
+        <div class="flex flex-col gap-y-10">
+          <work-experience
+            v-for="experience in experiences"
+            :key="experience.id"
+            :experience="experience"
+          />
+        </div>
+      </page-section>
       <page-section heading="Education">
-        <div class="flex gap-x-10 items-center">
-          <h3 class="text-md">
+        <div class="flex gap-x-10 items-end">
+          <h3 class="text-sm">
             Mendelova Univerzita v Brne
             <span class="font-light"> — Ekonomická informatika</span>
           </h3>
-          <p class="font-light text-sm">2020-2022</p>
+          <p class="font-light text-xs">2020-2022</p>
         </div>
       </page-section>
     </main>
@@ -83,8 +93,10 @@ import SkillSection from "./components/SkillSection.vue";
 import { skills, Related, Category } from "./data/skills";
 import { computed } from "vue";
 import PageSubsection from "./components/PageSubsection.vue";
+import WorkExperience from "./components/WorkExperience.vue";
+import { experiences } from "./data/experiences";
 
-function filterSkills(category, related?) {
+function filterSkills(category: Category, related?: Related) {
   return computed(() => {
     return skills.filter(
       (skill) => skill.category === category && skill.related === related

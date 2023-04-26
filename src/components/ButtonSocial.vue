@@ -11,7 +11,9 @@
     target="_blank"
     rel="noreferrer"
   >
-    {{ text }}
+    <div class="flex items-center justify-center gap-x-1">
+      <slot /><span>{{ text }}</span>
+    </div>
   </a>
 </template>
 <script setup lang="ts">

@@ -1,3 +1,5 @@
+import { Experience, experiences } from "./experiences";
+
 export enum Category {
   Languages = "Languages",
   Design = "Design",
@@ -18,6 +20,7 @@ export interface Skill {
   name: string;
   category: Category;
   related: Related;
+  experience?: Experience;
 }
 
 export const skills: Skill[] = [
