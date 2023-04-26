@@ -1,0 +1,13 @@
+<template>
+  <section class="grid grid-cols-4 px-4 border-b border-white/10 py-10">
+    <h3 class="text-md col-span-1">{{ heading }}</h3>
+    <div class="col-span-3 flex flex-col gap-y-4">
+      <slot />
+    </div>
+  </section>
+</template>
+<script setup lang="ts">
+const props = defineProps<{
+  heading: string;
+}>();
+</script>
