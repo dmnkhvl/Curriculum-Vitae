@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-between items-center">
+    <div class="sm:flex justify-between items-center">
       <h3 class="text-sm">
         {{ experience.company }}
         <span class="font-light"> — {{ experience.position }}</span>
@@ -9,7 +9,7 @@
         {{ experience.from }} - {{ experience.to }}
       </p>
     </div>
-    <div class="flex items-center gap-2 flex-wrap max-w-[80%] mt-2">
+    <div class="mt-4 sm:mt-2 flex items-center gap-2 flex-wrap">
       <skill-label
         v-for="skill in experience.skills"
         :key="experience.id"

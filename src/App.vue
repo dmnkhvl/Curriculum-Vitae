@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="text-center">
-      <h1 class="text-[2.9rem] font-bold mt-10">Dominik Havel</h1>
+      <h1 class="text-4xl sm:text-[2.9rem] font-bold mt-10">Dominik Havel</h1>
       <h2 class="font-light mt-3 text-lg">Frontend Software Engineer</h2>
 
       <div class="flex justify-center items-center gap-x-2 mt-6">
@@ -10,21 +10,21 @@
           href="https://dmnkhvl.eu"
           aria-label="Link to my website"
           basic
-          ><img src="../public/web.svg" alt="website" class="w-4 h-4"
+          ><img src="web.svg" alt="website" class="w-4 h-4"
         /></button-social>
         <button-social
           text="/dmnkhvl"
           href="https://www.linkedin.com/in/dmnkhvl/"
           aria-label="Link to my LinkedIn"
           linkedin
-          ><img src="../public/linkedin.svg" alt="linkedin" class="w-4 h-4"
+          ><img src="linkedin.svg" alt="linkedin" class="w-4 h-4"
         /></button-social>
         <button-social
           text="/dmnkhvl"
           href="https://github.com/dmnkhvl"
           aria-label="Link to my GitHub"
           github
-          ><img src="../public/github.svg" alt="github" class="w-4 h-4"
+          ><img src="github.svg" alt="github" class="w-4 h-4"
         /></button-social>
       </div>
       <div
@@ -77,12 +77,15 @@
         </div>
       </page-section>
       <page-section heading="Education">
-        <div class="flex gap-x-10 items-end">
+        <div class="sm:flex gap-x-10 items-end">
           <h3 class="text-sm">
             Mendelova Univerzita v Brne
-            <span class="font-light"> — Ekonomická informatika</span>
+            <span class="font-light"
+              ><br class="sm:hidden" />
+              — Ekonomická informatika</span
+            >
           </h3>
-          <p class="font-light text-xs">2020-2022</p>
+          <p class="font-light text-xs mt-2 sm:mt-0">2020-2022</p>
         </div>
       </page-section>
     </main>
@@ -117,7 +120,6 @@ const backendTechnologies = filterSkills(
   Related.Backend
 );
 const UITechnologies = filterSkills(Category.Technologies, Related.UI);
-const designSkills = filterSkills(Category.Design);
 const devTools = filterSkills(Category.Tools, Related.Dev);
 const designTools = filterSkills(Category.Tools, Related.Design);
 </script>
