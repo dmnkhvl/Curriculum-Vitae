@@ -37,11 +37,13 @@
     <hr class="w-full mt-10 opacity-10" />
     <main>
       <page-section heading="About Me">
-        <p class="font-extralight text-sm">
-          Transforming code into meaningful and enjoyable experiences at
-          Websupport. Transforming code into meaningful and enjoyable
-          experiences at Websupport. Transforming code into meaningful and
-          enjoyable experiences at Websupport.
+        <p class="font-extralight text-sm max-w-[55ch] leading-relaxed">
+          I am a frontend web developer with an eye for detail. After years of
+          playing basketball at the national level and graphic designing , I
+          decided to develop web applications in college, where I had the chance
+          to work with different technologies. Since then I had the opportunity
+          to create and be part of multiple app developments. Currently I am
+          ready for a new challenge and opportunity .
         </p>
       </page-section>
       <page-section heading="Skills & Tools">
