@@ -1,8 +1,7 @@
-import { Experience, experiences } from "./experiences";
+import { Experience } from "./experiences";
 
 export enum Category {
   Languages = "Languages",
-  Design = "Design",
   Technologies = "Technologies",
   Tools = "Tools",
 }
@@ -11,8 +10,8 @@ export enum Related {
   Frontend = "Frontend",
   Backend = "Backend",
   UI = "UI",
-  Design = "Design",
   Dev = "Dev",
+  Design = "Design",
 }
 
 export interface Skill {
@@ -168,18 +167,7 @@ export const skills: Skill[] = [
     category: Category.Technologies,
     related: Related.Frontend,
   },
-  {
-    id: 22,
-    name: "UI/UX Deisgn",
-    category: Category.Design,
-    related: Related.Design,
-  },
-  {
-    id: 23,
-    name: "Graphic Design",
-    category: Category.Design,
-    related: Related.Design,
-  },
+
   {
     id: 24,
     name: "PHPStorm",

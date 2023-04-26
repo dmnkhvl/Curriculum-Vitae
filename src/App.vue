@@ -39,12 +39,17 @@
     <main>
       <page-section heading="About Me" class="mt-4">
         <p class="font-extralight text-xs max-w-[55ch] leading-relaxed">
-          I am a frontend web developer with an eye for detail. After years of
-          playing basketball at the national level and graphic designing , I
-          decided to develop web applications in college, where I had the chance
-          to work with different technologies. Since then I had the opportunity
-          to create and be part of multiple app developments. Currently I am
-          ready for a new challenge and opportunity .
+          <span class="font-normal">Software Engineer</span> focused mainly on
+          the frontend of applications.
+          <span class="font-normal"
+            >Using my skills to transform code into meaningful and enjoyable
+            experiences</span
+          >. I started working as a graphic designer while playing basketball.
+          That led me to creating simple websites with a focus on UI/UX. After 5
+          years of graphic designing I stared building website with PHP,
+          JavaScript, and HTML/CSS. It's been 7 years since then, and I upgraded
+          my tech stack to Vue.js, React, TypeScript, and Nuxt.js, among other
+          technologies.
         </p>
       </page-section>
       <page-section heading="Skills & Tools">
@@ -56,9 +61,6 @@
           <skill-section title="FE related" :skills="frontendTechnologies" />
           <skill-section title="BE related" :skills="backendTechnologies" />
           <skill-section title="UI related" :skills="UITechnologies" />
-        </page-subsection>
-        <page-subsection heading="Design">
-          <skill-section :skills="designSkills" />
         </page-subsection>
         <page-subsection heading="Tools">
           <skill-section title="Dev related" :skills="devTools" />
