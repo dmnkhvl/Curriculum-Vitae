@@ -231,10 +231,4 @@ export const skills: Skill[] = [
     category: Category.Technologies,
     related: Related.Frontend,
   },
-  {
-    id: 31,
-    name: "Rest API",
-    category: Category.Technologies,
-    related: Related.Frontend,
-  },
 ];
