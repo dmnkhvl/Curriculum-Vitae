@@ -1,11 +1,11 @@
-enum Category {
+export enum Category {
   Languages = "Languages",
   Design = "Design",
   Technologies = "Technologies",
   Tools = "Tools",
 }
 
-enum Related {
+export enum Related {
   Frontend = "Frontend",
   Backend = "Backend",
   UI = "UI",

@@ -59,7 +59,7 @@
         </page-subsection>
         <page-subsection heading="Tools">
           <skill-section title="Dev related" :skills="devTools" />
-          <skill-section title="Designer related" :skills="designerTools" />
+          <skill-section title="Designer related" :skills="designTools" />
         </page-subsection>
       </page-section>
       <page-section heading="Education">
@@ -78,55 +78,30 @@
 import ButtonSocial from "./components/ButtonSocial.vue";
 import PageSection from "./components/PageSection.vue";
 import SkillSection from "./components/SkillSection.vue";
-import { skills } from "./data/skills";
+import { skills, Related, Category } from "./data/skills";
 import { computed } from "vue";
 import PageSubsection from "./components/PageSubsection.vue";
 
-// Languages
-const frontendLanguages = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Languages" && skill.related === "Frontend"
-  );
-});
+function filterSkills(category, related?) {
+  return computed(() => {
+    return skills.filter(
+      (skill) => skill.category === category && skill.related === related
+    );
+  });
+}
 
-const backendLanguages = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Languages" && skill.related === "Backend"
-  );
-});
-
-// Technologies
-const frontendTechnologies = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Technologies" && skill.related === "Frontend"
-  );
-});
-const backendTechnologies = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Technologies" && skill.related === "Backend"
-  );
-});
-const UITechnologies = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Technologies" && skill.related === "UI"
-  );
-});
-
-// Design
-const designSkills = computed(() => {
-  return skills.filter((skill) => skill.category === "Design");
-});
-
-// Tools
-const devTools = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Tools" && skill.related === "Dev"
-  );
-});
-
-const designerTools = computed(() => {
-  return skills.filter(
-    (skill) => skill.category === "Tools" && skill.related === "Design"
-  );
-});
+const frontendLanguages = filterSkills(Category.Languages, Related.Frontend);
+const backendLanguages = filterSkills(Category.Languages, Related.Backend);
+const frontendTechnologies = filterSkills(
+  Category.Technologies,
+  Related.Frontend
+);
+const backendTechnologies = filterSkills(
+  Category.Technologies,
+  Related.Backend
+);
+const UITechnologies = filterSkills(Category.Technologies, Related.UI);
+const designSkills = filterSkills(Category.Design);
+const devTools = filterSkills(Category.Tools, Related.Dev);
+const designTools = filterSkills(Category.Tools, Related.Design);
 </script>
