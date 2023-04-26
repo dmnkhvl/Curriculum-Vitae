@@ -1,5 +1,3 @@
-import { Experience } from "./experiences";
-
 export enum Category {
   Languages = "Languages",
   Technologies = "Technologies",
@@ -19,7 +17,6 @@ export interface Skill {
   name: string;
   category: Category;
   related: Related;
-  experience?: Experience;
 }
 
 export const skills: Skill[] = [
@@ -170,7 +167,7 @@ export const skills: Skill[] = [
 
   {
     id: 24,
-    name: "PHPStorm",
+    name: "PhpStorm",
     category: Category.Tools,
     related: Related.Dev,
   },
@@ -215,5 +212,29 @@ export const skills: Skill[] = [
     name: "Adobe Illustrator",
     category: Category.Tools,
     related: Related.Design,
+  },
+  {
+    id: 29,
+    name: "NPM",
+    category: Category.Technologies,
+    related: Related.Frontend,
+  },
+  {
+    id: 30,
+    name: "Ionic Framework",
+    category: Category.Technologies,
+    related: Related.Frontend,
+  },
+  {
+    id: 31,
+    name: "Rest API",
+    category: Category.Technologies,
+    related: Related.Frontend,
+  },
+  {
+    id: 31,
+    name: "Rest API",
+    category: Category.Technologies,
+    related: Related.Frontend,
   },
 ];
